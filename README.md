@@ -1,6 +1,9 @@
 uglify-js-export
 ===
 
+[![npm version](https://img.shields.io/npm/v/uglify-js-export)](https://www.npmjs.com/package/uglify-js-export)
+[![CI](https://github.com/jaywcjlove/uglify-js-export/actions/workflows/ci.yml/badge.svg)](https://github.com/jaywcjlove/uglify-js-export/actions/workflows/ci.yml)
+
 [UglifyJS](https://github.com/mishoo/UglifyJS) is a JavaScript parser, minifier, compressor and beautifier toolkit.
 
 A transform to make UglifyJS work in [CommonJS](http://wiki.commonjs.org/wiki/Modules/1.1).
