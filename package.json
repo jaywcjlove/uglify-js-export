@@ -2,6 +2,7 @@
   "name": "uglify-js-export",
   "version": "1.0.2",
   "description": "A transform to make UglifyJS work in browserify.",
+  "homepage": "https://jaywcjlove.github.io/tools/#/js-beautifier",
   "main": "./lib/uglifyjs.js",
   "typings": "./index.d.ts",
   "scripts": {
