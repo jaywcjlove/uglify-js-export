@@ -1,6 +1,6 @@
 {
   "name": "uglify-js-export",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A transform to make UglifyJS work in browserify.",
   "main": "lib/uglifyjs.js",
   "scripts": {
