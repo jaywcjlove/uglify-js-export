@@ -14,7 +14,9 @@ jobs:
           node-version: 16
 
       - run: npm install
+      - run: mkdir -p lib
       - run: npm run start
+      - run: npm run test
 
       - name: Create Tag
         id: create_tag
