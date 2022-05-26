@@ -2,7 +2,8 @@
   "name": "uglify-js-export",
   "version": "1.0.1",
   "description": "A transform to make UglifyJS work in browserify.",
-  "main": "lib/uglifyjs.js",
+  "main": "./lib/uglifyjs.js",
+  "typings": "./index.d.ts",
   "scripts": {
     "start": "node script.js",
     "test:watch": "jest --watch",
