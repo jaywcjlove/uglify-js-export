@@ -15,6 +15,8 @@ A transform to make UglifyJS work in [CommonJS](http://wiki.commonjs.org/wiki/Mo
 npm i uglify-js-export
 ```
 
+## Usage
+
 ```js
 import UglifyJS from 'uglify-js-export';
 
