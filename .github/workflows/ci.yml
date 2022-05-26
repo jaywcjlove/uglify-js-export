@@ -1,0 +1,63 @@
+name: CI
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - run: npm install
+      - run: npm start
+
+      - name: Create Tag
+        id: create_tag
+        uses: jaywcjlove/create-tag-action@v1.3.6
+        with:
+          package-path: ./package.json
+
+      - name: Generate Changelog
+        id: changelog
+        uses: jaywcjlove/changelog-generator@v1.5.3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          filter-author: (jaywcjlove|小弟调调™|dependabot\[bot\]|Renovate Bot)
+          filter: (^[\s]+?[R|r]elease)|(^[R|r]elease)
+
+      - name: Create Release
+        uses: ncipollo/release-action@v1
+        if: steps.create_tag.outputs.successful
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          name: ${{ steps.create_tag.outputs.version }}
+          tag: ${{ steps.create_tag.outputs.version }}
+          body: |
+            Comparing Changes: ${{ steps.changelog.outputs.compareurl }}  
+
+            ${{ steps.changelog.outputs.changelog }}
+
+            ```bash
+            npm i uglify-js-export@${{steps.changelog.outputs.version}}
+            ```
+
+            ```js
+            import UglifyJS from 'uglify-js-export';
+
+            const code = "function add(first, second) { return first + second; }";
+            const result = UglifyJS.minify(code);
+
+            console.log(result.error); // runtime error, or `undefined` if no error
+            console.log(result.code);  // minified output: function add(n,d){return n+d}
+            ```
+
+      - uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
+          package: ./package.json
+
