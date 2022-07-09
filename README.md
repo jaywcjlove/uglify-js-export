@@ -1,7 +1,7 @@
 uglify-js-export
 ===
 
-[![npm version](https://img.shields.io/npm/v/uglify-js-export?logo=npm)](https://www.npmjs.com/package/uglify-js-export)
+[![npm version](https://img.shields.io/npm/v/uglify-js-export?logo=npm&label=uglify-js-export&labelColor=dd4e4c&color=333)](https://www.npmjs.com/package/uglify-js-export)
 [![npm version](https://img.shields.io/npm/v/uglify-js?logo=npm&label=uglify-js)](https://www.npmjs.com/package/uglify-js)
 [![npm year](https://img.shields.io/npm/dy/uglify-js)](https://www.npmjs.com/package/uglify-js)
 [![jsDelivr hits (npm)(year)](https://img.shields.io/jsdelivr/npm/hy/uglify-js)](https://www.npmjs.com/package/uglify-js)
