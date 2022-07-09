@@ -1,6 +1,6 @@
 {
   "name": "uglify-js-export",
-  "version": "3.16.0",
+  "version": "3.16.2",
   "description": "A transform to make UglifyJS work in browserify.",
   "homepage": "https://jaywcjlove.github.io/tools/#/js-beautifier",
   "main": "./lib/uglifyjs.js",
@@ -27,6 +27,6 @@
     "@types/uglify-js": "^3.13.2",
     "fs-extra": "^10.1.0",
     "jest": "^28.1.0",
-    "uglify-js": "3.16.0"
+    "uglify-js": "3.16.2"
   }
 }
