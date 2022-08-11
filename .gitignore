@@ -1,12 +1,5 @@
 node_modules
 coverage
-dist
-build
-lib
-esm
-cjs
-
-dist.css
 
 # Log files
 npm-debug.log*

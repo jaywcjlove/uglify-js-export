@@ -6,6 +6,7 @@
   "main": "./lib/uglifyjs.js",
   "typings": "./index.d.ts",
   "scripts": {
+    "preinstall": "npm start",
     "start": "node script.js",
     "test:watch": "jest --watch",
     "test": "jest"
@@ -15,6 +16,8 @@
     "url": "git+https://github.com/jaywcjlove/uglify-js-export.git"
   },
   "keywords": [
+    "js",
+    "uglify",
     "uglify-js"
   ],
   "author": "Kenny Wong<wowohoo@qq.com>",
@@ -24,9 +27,9 @@
     "index.d.ts"
   ],
   "devDependencies": {
-    "@types/uglify-js": "^3.13.2",
+    "@types/uglify-js": "^3.16.0",
     "fs-extra": "^10.1.0",
     "jest": "^28.1.0",
-    "uglify-js": "3.16.2"
+    "uglify-js": "3.16.3"
   }
 }
