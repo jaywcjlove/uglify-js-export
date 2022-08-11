@@ -9,7 +9,7 @@
     "preinstall": "npm start",
     "start": "node script.js",
     "test:watch": "jest --watch",
-    "test": "jest"
+    "test": "jest --coverage"
   },
   "repository": {
     "type": "git",
