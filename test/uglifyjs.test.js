@@ -1,3 +1,5 @@
+const path = require('path');
+const fs = require('fs');
 const { minify } = require('../');
 
 const code = `function Good(name) {
@@ -25,4 +27,11 @@ const code3 = `function Good(name) {
 
 test('minify 3', () => {
   expect(minify(code3, { compress: { unused: false }}).code).toBe("function Good(o){var n;return\"Hi!, \"+o+\"good.\"}");
+});
+
+test('minify 2', () => {
+  const dirs = fs.readdirSync(path.resolve(process.cwd(), 'node_modules/uglify-js/lib/'));
+  expect(dirs).toEqual(expect.arrayContaining(['ast.js', 'compress.js', 'minify.js', 'mozilla-ast.js', 'output.js', 'parse.js', 'propmangle.js', 'scope.js', 'sourcemap.js', 'transform.js', 'utils.js']));
+  expect(fs.existsSync(path.resolve(process.cwd(), 'node_modules/uglify-js/tools/exports.js'))).toBeTruthy();
+  expect(fs.existsSync(path.resolve(process.cwd(), 'node_modules/@types/uglify-js/index.d.ts'))).toBeTruthy();
 });

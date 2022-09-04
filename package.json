@@ -7,7 +7,7 @@
   "typings": "./index.d.ts",
   "scripts": {
     "preinstall": "npm start",
-    "start": "node script.js",
+    "start": "node scripts/build.js",
     "test:watch": "jest --watch",
     "test": "jest --coverage"
   },
@@ -27,7 +27,7 @@
     "index.d.ts"
   ],
   "devDependencies": {
-    "@types/uglify-js": "^3.16.0",
+    "@types/uglify-js": "^3.17.0",
     "fs-extra": "^10.1.0",
     "jest": "^28.1.0",
     "uglify-js": "3.17.0"
