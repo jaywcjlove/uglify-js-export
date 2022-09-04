@@ -6,7 +6,6 @@
   "main": "./lib/uglifyjs.js",
   "typings": "./index.d.ts",
   "scripts": {
-    "preinstall": "npm start",
     "start": "node scripts/build.js",
     "test:watch": "jest --watch",
     "test": "jest --coverage"
