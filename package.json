@@ -28,7 +28,7 @@
   "devDependencies": {
     "@types/uglify-js": "^3.17.0",
     "fs-extra": "^10.1.0",
-    "jest": "^28.1.0",
+    "jest": "^29.0.0",
     "uglify-js": "3.17.3"
   }
 }
