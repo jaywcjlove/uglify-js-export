@@ -3,6 +3,7 @@
   "version": "3.17.4",
   "description": "A transform to make UglifyJS work in browserify.",
   "homepage": "https://jaywcjlove.github.io/tools/#/js-beautifier",
+  "funding": "https://jaywcjlove.github.io/#/sponsor",
   "main": "./lib/uglifyjs.js",
   "typings": "./index.d.ts",
   "scripts": {
